@@ -41,21 +41,16 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script>
-      (function ($) {
-        var socNav;
+      window.addEventListener('load', function() {
+        var socNav = document.getElementById('social-navigation');
 
-        if ($('#social-navigation').length) {
-          socNav = $('#social-navigation');
-
-          if (socNav.hasClass('hidden')) {
-            setTimeout(function () {
-              socNav.removeClass('hidden');
-            }, 500);
-          }
+        if (socNav.classList.contains('hidden')) {
+          setTimeout(function() {
+            socNav.className = '';
+          }, 500);
         }
-      })(jQuery);
+      }, false);
     </script>
   </body>
 </html>
