@@ -54,7 +54,7 @@
           </div>
           <footer id="colophon">
             <div class="inner">
-              <p class="copy">&copy; 2009-2021 Jonathan Calvin</p>
+              <p class="copy"></p>
             </div>
           </footer>
         </div>
@@ -70,6 +70,9 @@
           }, 500);
         }
       }, false);
+      
+      const yearEl = document.querySelector('.copy');
+      yearEl.innerHTML = `&copy 2009-${new Date().getFullYear();} Jonathan Calvin`;
     </script>
   </body>
 </html>
